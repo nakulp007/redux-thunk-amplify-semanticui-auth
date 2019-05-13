@@ -1,0 +1,4 @@
+export const userActionConstants = {
+    HEADER_MENU_ITEM_CLICKED: 'HEADER_MENU_ITEM_CLICKED',
+    TOGGLE_SIDEBAR: 'TOGGLE_SIDEBAR',
+};

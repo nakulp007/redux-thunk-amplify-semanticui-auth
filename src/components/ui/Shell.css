@@ -1,0 +1,25 @@
+.Shell .footerMessages{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+}
+
+.Shell .footerMessages .message{
+    margin: auto;
+    max-width: 800px;
+}
+
+.Shell .footerMessages .message .content > * {
+    margin: 5px;
+}
+
+@media all and (min-width: 480px) {
+    .Shell .footerMessages{
+        bottom: 10px;
+    }
+
+    .Shell .footerMessages .message{
+        width: 80%;
+    }
+}

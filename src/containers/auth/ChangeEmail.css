@@ -1,0 +1,26 @@
+@media all and (min-width: 480px) {
+    .ChangeEmail {
+      padding: 60px 0;
+    }
+  
+    .ChangeEmail form {
+      margin: 0 auto;
+      max-width: 320px !important;
+    }
+
+    .ChangeEmail .changeSuccessful {
+        max-width: 400px;
+    }
+}
+
+.ChangeEmail .changeSuccessful {
+    margin: 0 auto;
+    text-align: center;
+}
+  
+.ChangeEmail .changeSuccessful .icon {
+    color: grey;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+  

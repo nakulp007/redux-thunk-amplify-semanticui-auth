@@ -1,0 +1,42 @@
+{
+  "name": "auth-sample",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aws-amplify": "^1.1.26",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^7.0.2",
+    "react-responsive": "^6.1.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.86.0"
+  },
+  "scripts": {
+    "_comments_": "Syntax for setting variables is different for cmd, powershell and macOS. Check https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables#adding-temporary-environment-variables-in-your-shell ",
+    
+    "start": "set \"REACT_APP_ENVIRONMENT=dev\" && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+
+    "predeploy": "set \"REACT_APP_ENVIRONMENT=dev\" && npm run build",
+    "deploy": "aws s3 sync build/ s3://YOUR_DEV_S3_DEPLOY_BUCKET_NAME",
+    "postdeploy": "aws cloudfront create-invalidation --distribution-id YOUR_DEV_CF_DISTRIBUTION_ID --paths '/*' && aws cloudfront create-invalidation --distribution-id YOUR_DEV_WWW_CF_DISTRIBUTION_ID --paths '/*'",
+
+    "predeploy:prod": "set \"REACT_APP_ENVIRONMENT=production\" && npm run build",
+    "deploy:prod": "aws s3 sync build/ s3://YOUR_PROD_S3_DEPLOY_BUCKET_NAME",
+    "postdeploy:prod": "aws cloudfront create-invalidation --distribution-id YOUR_PROD_CF_DISTRIBUTION_ID --paths '/*' && aws cloudfront create-invalidation --distribution-id YOUR_PROD_WWW_CF_DISTRIBUTION_ID --paths '/*'",
+
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

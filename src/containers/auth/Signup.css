@@ -1,0 +1,40 @@
+@media all and (min-width: 480px) {
+    .Signup {
+      padding: 60px 0;
+    }
+  
+    .Signup form {
+      margin: 0 auto;
+      max-width: 320px !important;
+    }
+
+    .Signup .loggingIn {
+      max-width: 400px;
+    }
+
+    .Signup .confirmationSuccess {
+      max-width: 400px;
+    }
+}
+  
+.Signup form span.help-block {
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: #999;
+}
+
+.Signup .loggingIn {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Signup .confirmationSuccess {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Signup .confirmationSuccess .icon {
+  color: grey;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
